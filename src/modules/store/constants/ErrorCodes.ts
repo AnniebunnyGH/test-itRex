@@ -1,0 +1,5 @@
+export enum errorCodes {
+    KEY_NOT_EXIST = 'KEY_NOT_EXIST',
+    EXPIRED_KEY = 'EXPIRED_KEY',
+    NOT_CORRECT_VALUE = 'NOT_CORRECT_VALUE'
+}
