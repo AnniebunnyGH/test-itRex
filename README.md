@@ -1,20 +1,16 @@
 # Api
-
-1. Add to queue:
-    POST /api/queue
+## Add to queue:  
+    POST /api/queue  
     body: {value: string}
-
-2. Get from queue
+## Get from queue:  
     GET /api/queue
 
-3. Add key-value to store
-    POST /api/store/:key?ttl=number
+## Add key-value to store:  
+    POST /api/store/:key?ttl=number  
     body: {value: string | JSON}
-
-4. Get value by key from store
+## Get value by key from store:  
     GET /api/store/:key
-
-5. Delete key from store
+## Delete key from store:  
     DELETE /api/store/:key
 # Task text
 
