@@ -30,7 +30,7 @@ class StoreContorller {
     ) {
         const responseData = new ResponseData() 
         try {
-            await this.storeService.setValue(req.params.key, req.body, Number(req.query.ttl))
+            await this.storeService.setValue(req.params.key, req.body.value, Number(req.query.ttl))
             responseData.setData(null)
         } catch(e) {
             responseData.setError(e)

@@ -22,12 +22,12 @@ class QueueContorller {
     }
 
     async addItem(
-        req: Request<{}, IQueueItem, any>,
+        req: Request<{}, any, {item: any}>,
         res: Response
     ) {
         const responseData = new ResponseData() 
         try {
-            await this.queueService.addItem(req.body)
+            await this.queueService.addItem(req.body.item)
             responseData.setData(null)
         } catch(e) {
             responseData.setError(e)
@@ -38,4 +38,4 @@ class QueueContorller {
 }
 
 
-export default new QueueContorller()
+export const queueController = new QueueContorller()

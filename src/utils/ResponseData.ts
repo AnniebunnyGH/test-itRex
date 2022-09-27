@@ -3,7 +3,7 @@ import { CustomError } from "./CustomError"
 export class ResponseData {
     private data: any = null
     private success = false
-    private errorCode: string | null = null
+    private errorCode?: string | null
 
     constructor() {}
 

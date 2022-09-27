@@ -1,8 +1,8 @@
 import { Router } from "express";
-import QueueController from "./QueueController";
+import { queueController } from "./QueueController";
 
 export default (router: Router) => {
     router.route('/queue')
-        .get(QueueController.getItem)
-        .post(QueueController.addItem)
+        .get((req, res) => queueController.getItem(req, res))
+        .post((req, res) => queueController.addItem(req, res))
 }

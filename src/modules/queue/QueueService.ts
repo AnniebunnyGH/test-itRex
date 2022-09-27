@@ -3,7 +3,7 @@ import { Constants } from "./constants"
 import { IQueueItem } from "./interfaces/IQueueItem"
 
 export class QueueService {
-    private readonly queue: any[] = []
+    private readonly queue: IQueueItem[] = []
 
     async addItem(item: IQueueItem) {
         if (this.validateItem(item)) 

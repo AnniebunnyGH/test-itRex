@@ -1,4 +1,5 @@
 export class CustomError extends Error {
+    data?: any
     errorCode: string
 
     constructor(errorCode: string, message?: string) {
@@ -6,5 +7,12 @@ export class CustomError extends Error {
         super(errorCode)
 
         this.errorCode = errorCode
+    }
+
+    
+    setData(data: any) {
+        this.data = data
+
+        return this
     }
 }
